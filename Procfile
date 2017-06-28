@@ -1,1 +1,1 @@
-web: node index.js
+web: ./node_modules/.bin/node-es6 index.js
