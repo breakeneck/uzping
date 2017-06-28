@@ -8,6 +8,9 @@ import request from 'request';
 
 const SEARCH_URL = 'http://booking.uz.gov.ua/purchase/search/';
 
+
+let time = () => (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000))
+    .toISOString().replace('T',' ').split('.').shift();
 let ping = () => {
     request
         .post({
@@ -43,27 +46,28 @@ let ping = () => {
         });
 };
 
-let time = () => (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000))
-    .toISOString().replace('T',' ').split('.').shift();
+
+// let timer = setInterval(ping, 5 * 1000);
 
 
-
-ping();
 /*
+ping();
 let timer = setInterval(ping, 5 * 60 * 1000);
+*/
 
 const Slimbot = require('slimbot');
 const slimbot = new Slimbot(process.env['TELEGRAM_BOT_TOKEN']);
 
-// Register listeners
+let chatID = null;
 
+// Register listeners
 slimbot.on('message', message => {
-    slimbot.sendMessage(message.chat.id, 'Message received');
+    chatID = message.chat.id;
+    slimbot.sendMessage(message.chat.id, message.text);
 });
 
 // Call API
-
-slimbot.startPolling();*/
+slimbot.startPolling();
 
 
 /*

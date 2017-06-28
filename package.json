@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.81.0",
+    "slimbot": "^0.6.1",
     "viber-bot": "^1.0.12"
   }
 }
