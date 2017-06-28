@@ -50,10 +50,9 @@ let ping = () => {
 // let timer = setInterval(ping, 5 * 1000);
 
 
-/*
+
 ping();
 let timer = setInterval(ping, 5 * 60 * 1000);
-*/
 
 const Slimbot = require('slimbot');
 const slimbot = new Slimbot(process.env['TELEGRAM_BOT_TOKEN']);
@@ -63,7 +62,7 @@ let chatID = null;
 // Register listeners
 slimbot.on('message', message => {
     chatID = message.chat.id;
-    slimbot.sendMessage(message.chat.id, message.text);
+    slimbot.sendMessage(message.chat.id, message.text + chatID);
 });
 
 // Call API

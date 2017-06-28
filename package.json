@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/node-es6 index.js"
   },
   "author": "Yuri Datsenko breakeneck@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "node-es6": "^0.3.1",
     "request": "^2.81.0",
     "slimbot": "^0.6.1",
     "viber-bot": "^1.0.12"
