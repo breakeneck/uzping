@@ -4,10 +4,13 @@
  * @date: 26.06.2017
  */
 
+console.log( 'alive!' );
+
+/*
 import request from 'request';
 
 const SEARCH_URL = 'http://booking.uz.gov.ua/purchase/search/';
-
+//const STATION_URL = 'http://booking.uz.gov.ua/purchase/station/?term=';
 
 let time = () => (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000))
     .toISOString().replace('T',' ').split('.').shift();

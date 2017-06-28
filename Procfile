@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/node-es6 index.js
+web: web: npm start
